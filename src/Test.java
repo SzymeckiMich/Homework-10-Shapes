@@ -1,20 +1,22 @@
 public class Test {
     public static void main(String[] args) {
-        ShapeCalculator calculator = new ShapeCalculator();
-        Ball ball = new Ball(5);
-        Circle circle = new Circle(3);
-        Line2D line = new Line2D(1, 2, 1, 5);
-        Rectangle rectangle = new Rectangle(4, 5);
-        Cube cube = new Cube(6);
 
-        System.out.printf("Volume of cube = %.2f\n", calculator.cubeVolume(cube));
-        System.out.printf("Volume of ball = %.2f\n", calculator.ballVolume(ball));
+        Shape[] shapes = new Shape[10];
 
-        System.out.printf("Field of rectangle = %.2f\n", calculator.rectangleArea(rectangle));
-        System.out.printf("Field of circle = %.2f\n", calculator.circleArea(circle));
-        System.out.printf("Length of line = %.2f\n", calculator.lineLength(line));
-        
+        shapes[0] = new Ball(5);
+        shapes[1] = new Circle(3);
+        shapes[2] = new Line2D(1, 2, 1, 5);
+        shapes[3] = new Rectangle(4, 5);
+        shapes[4] = new Cube(6);
+        shapes[5] = new Ball(14);
+        shapes[6] = new Circle(33);
+        shapes[7] = new Line2D(41, 2, 1, 5);
+        shapes[8] = new Rectangle(41, 5);
+        shapes[9] = new Cube(16);
+
+        InfoPrinter.printShapesInfo(shapes);
 
 
     }
+
 }
